@@ -25,24 +25,11 @@ const images = [
 // console.log(galeryImg(images));
 
 const galeryImg = images
-  .map((image) => `<li><img class="list"
+  .map((image) => `<li><img
   src="${image.url}"
-  alt="${image.alt}"></li>`)
+  alt="${image.alt}"
+  width="200"></li>`)
   .join("");
 
 ul.insertAdjacentHTML("afterbegin", galeryImg);
-
-
-
-// const li = document.querySelectorAll("li");
-// li.clasList.add("list-style");
-
-const imgStyle = document.querySelectorAll("img");
-imgStyle.classList.add("img")
-
-const listStyle = document.querySelectorAll(".list");
-listStyle.listStyleType = "none";
-imgStyle.width = "200px";
-
-
 
