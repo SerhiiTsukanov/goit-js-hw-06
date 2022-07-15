@@ -1,4 +1,5 @@
-const ul = document.querySelector("ul");
+const ul = document.querySelector(".gallery");
+
 const images = [
   {
     url: 'https://images.pexels.com/photos/140134/pexels-photo-140134.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
@@ -14,9 +15,34 @@ const images = [
   },
 ];
 
-const createLiFromArray = (array) =>
-  array.map((el) => `<li>${el}</li>`).join("");
-const list = createLiFromArray(images);
+// const galeryImg = (array) =>
+//   array.map((image) => `<li><img
+//    src="${image.url}"
+//    alt="${image.alt}"></li>`)
+//    .join("");
+//   const list = galeryImg(images);
+// ul.insertAdjacentHTML("beforeend", list);
+// console.log(galeryImg(images));
 
-ul.insertAdjacentHTML("beforeend", list);
-console.log(createLiFromArray(images));
+const galeryImg = images
+  .map((image) => `<li><img class="list"
+  src="${image.url}"
+  alt="${image.alt}"></li>`)
+  .join("");
+
+ul.insertAdjacentHTML("afterbegin", galeryImg);
+
+
+
+// const li = document.querySelectorAll("li");
+// li.clasList.add("list-style");
+
+const imgStyle = document.querySelectorAll("img");
+imgStyle.classList.add("img")
+
+const listStyle = document.querySelectorAll(".list");
+listStyle.listStyleType = "none";
+imgStyle.width = "200px";
+
+
+
