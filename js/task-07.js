@@ -3,9 +3,9 @@ const span = document.querySelector("#text");
 console.log(input);
 console.log(span);
 input.addEventListener("input", (event) => {
-    textEl.style.fontSize = event.currentTarget.value;
-    console.dir(input);
+    const size = `${event.currentTarget.value}px`;
+    text.style.fontSize = size;
+   console.log(text.style.fontSize);
     
 })
-console.log(textEl.style.fontSize);
-console.log(event.currentTarget.value);
+
