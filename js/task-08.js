@@ -13,13 +13,11 @@ function onFormSubmit(event) {
         return
     }
     else {  
-    const formData = new FormData(event.currentTarget);
-        formData.forEach((value, name) => {
-            let data = { value, name };
-       console.log('onFormSubmit -> name', name);
-       console.log('onFormSubmit -> value', value);
-      console.log(data);
-    });
+    
+        const formData = { email, password }
+            
+      console.log(formData);
+    
       form.reset();  
 }
     
